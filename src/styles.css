@@ -1,11 +1,7 @@
-@font-face {
-  font-family: "dologan";
-  src: url("../src/fonts/dologan-bold.ttf") format('truetype');
-}
 
 head,body{
   background-color: #02101ffb;
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: "dologan"; }
+body { margin: 0;}
