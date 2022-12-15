@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core'
+import { environment } from 'src/environments/environment'
 import { HttpClient } from '@angular/common/http'
 import { Weather } from './interfaces/weather'
 import { map } from 'rxjs'
@@ -9,8 +10,8 @@ import { map } from 'rxjs'
 export class WeatherService {
   constructor (private readonly http: HttpClient) { }
 
-  private readonly apiKey = '820715dd55fa5508bac211c7a45b5f42'
-  private readonly url = 'http://api.openweathermap.org'
+  private readonly apiKey = environment.apiKey
+  private readonly url = environment.baseUrl
   private _weather!: Weather
 
   get weather (): Weather {
