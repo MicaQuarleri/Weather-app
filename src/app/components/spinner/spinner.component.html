@@ -1,0 +1,5 @@
+<div class="loading-spinner">
+    <mat-spinner class="spinner"></mat-spinner>
+    <h3 *ngIf="!locationNotFound" class="loading-message">Loading...</h3>
+    <h3 *ngIf="locationNotFound" class="loading-message">Please, activate your geolocation and refresh the page</h3>
+</div>

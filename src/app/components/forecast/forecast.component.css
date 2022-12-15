@@ -1,0 +1,18 @@
+#forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    font-family: "Kingthing";
+}
+
+ .day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+    margin-top: 10px;
+    width: 150px;
+    background-color: #001a33;
+}

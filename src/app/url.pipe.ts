@@ -1,0 +1,10 @@
+import { Pipe, PipeTransform } from '@angular/core'
+
+@Pipe({
+  name: 'url'
+})
+export class UrlPipe implements PipeTransform {
+  transform (value: string): string {
+    return `http://openweathermap.org/img/wn/${value}@2x.png`
+  }
+}

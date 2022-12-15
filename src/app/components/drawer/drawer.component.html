@@ -1,0 +1,29 @@
+<mat-drawer-container hasBackdrop="false">
+    <mat-drawer #drawer mode="over" class="search">
+        <button class="buttonClose" (click)="drawer.toggle()">X</button>
+        <form (submit)="findCity($event)">
+            <div class="input">
+                <mat-icon>search</mat-icon>
+                <input placeholder="search location">
+            </div>
+            <button>Search</button>
+        </form>
+        <ul *ngIf="error.length===0">
+            <li *ngFor="let city of possibleCities" (click)="citySelectWeather(city.name, drawer)" class="list">
+                <p>{{city.name}},{{city.state}},{{city.country}}</p><span>></span>
+            </li>
+        </ul>
+        <span *ngIf="error.length!==0">{{error}}</span>
+    </mat-drawer>
+    <mat-drawer-content class="search">
+        <button mat-button (click)="search(drawer)" class="buttonSearch">Search Places</button>
+        <img [src]="weatherData.list[0].weather[0].icon |url">
+        <p style="font-size:50px">{{weatherData.list[0].main.temp-273.15 |number: ".1-1"}} °C</p>
+        <p style="font-size:20px">{{weatherData.list[0].weather[0].description | titlecase}}</p>
+        <p>Today - {{today | date:"EEE,dd MMM"}}</p>
+        <div class="location">
+            <mat-icon>location_on</mat-icon>
+            <p>{{weatherData.city.name}}</p>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

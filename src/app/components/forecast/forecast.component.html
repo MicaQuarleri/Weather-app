@@ -1,0 +1,32 @@
+<div id="forecast">
+    <div class="day">
+        <h4>Tomorrow</h4>
+        <img [src]="weatherData.list[8].weather[0].icon |url">
+        <p>{{weatherData.list[8].main.temp-273.15 |number: ".2-2"}} °C</p>
+        <p>{{weatherData.list[8].weather[0].description | titlecase}}</p>
+    </div>
+    <div class="day">
+        <h4>{{weatherData.list[16].dt_txt | date:"EEE,dd MMM"}}</h4>
+        <img [src]="weatherData.list[16].weather[0].icon |url">
+        <p>{{weatherData.list[16].main.temp-273.15 |number: ".2-2"}} °C</p>
+        <p>{{weatherData.list[16].weather[0].description | titlecase}}</p>
+    </div>
+    <div class="day">
+        <h4>{{weatherData.list[24].dt_txt | date:"EEE,dd MMM"}}</h4>
+        <img [src]="weatherData.list[24].weather[0].icon |url">
+        <p>{{weatherData.list[24].main.temp-273.15 |number: ".2-2"}} °C</p>
+        <p>{{weatherData.list[24].weather[0].description | titlecase}}</p>
+    </div>
+    <div class="day">
+        <h4>{{weatherData.list[32].dt_txt | date:"EEE,dd MMM"}}</h4>
+        <img [src]="weatherData.list[32].weather[0].icon |url">
+        <p>{{weatherData.list[32].main.temp-273.15 |number: ".2-2"}} °C</p>
+        <p>{{weatherData.list[32].weather[0].description | titlecase}}</p>
+    </div>
+    <div class="day">
+        <h4>{{weatherData.list[39].dt_txt | date:"EEE,dd MMM"}}</h4>
+        <img [src]="weatherData.list[39].weather[0].icon |url">
+        <p>{{weatherData.list[39].main.temp-273.15 |number: ".2-2"}} °C</p>
+        <p>{{weatherData.list[39].weather[0].description | titlecase}}</p>
+    </div>
+</div>
